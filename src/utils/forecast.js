@@ -21,14 +21,22 @@ const forecast = (latitude , longitude, callback) => {
             callback('Not able to get the forecast, please try again', undefined)
         }else{
             callback(undefined,(
-                data={
-                    longitude: longitude,
-                    latitude: latitude,
-                    temperature: response.body.currently.temperature
-                }
-            ))
+                // data={
+                //     longitude: longitude,
+                //     latitude: latitude,
+                //     temperature: response.body.currently.temperature
+                // }
+                response.body.daily.data[0].summary+" It is currently "+response.body.currently.temperature+" degrees out. There is a "+response.body.currently.precipProbability+"% chance of rain. The highest temparature will be "+response.body.daily.data[0].temperatureHigh+" and the lowest temperature will be "+response.body.daily.data[0].temperatureLow            ))
         }
     })    
 }
+
+// Goal: Add new data to forecast
+
+// 1. Update the forecast string to include new data 
+// 2. Commit your changes
+// 3. Push your changes to gihub abd deploy to heroku
+// 4. Test your Work
+
 
 module.exports=forecast

@@ -79,11 +79,11 @@ weatherForm.addEventListener('submit', (e) => {
  
 
             } else {
-                text = data.address + ', '+ data.location+ ', '+data.forecast.longitude+ ', '+data.forecast.latitude+ ', '+data.forecast.temperature
-                messageTwo.textContent = text
-               // messageTwo.textContent = data.location
+                //text = data.address + ', '+ data.location+ ', '+data.forecast.longitude+ ', '+data.forecast.latitude+ ', '+data.forecast.temperature
+               // messageTwo.textContent = text
+                messageOne.textContent = data.location
 
-                //messageTwo.textContent = data.forecast
+                messageTwo.textContent = data.forecast
 
                 console.log(messageTwo.textContent)
 

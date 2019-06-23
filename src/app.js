@@ -132,7 +132,7 @@ app.get('/weather', (req, res) => {
  
 
         forecast(latitude, longitude, (error, foreCastData) => {
-
+            console.log(foreCastData)
             if (error) {
 
                 return res.send(error)
