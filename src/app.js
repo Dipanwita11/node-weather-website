@@ -45,7 +45,7 @@ app.use(express.static(publicDir))
 
  
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
 
     // res.send('Hello Express')
 
